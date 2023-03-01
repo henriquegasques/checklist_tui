@@ -36,6 +36,11 @@ library
   build-depends:
       base >=4.7 && <5
     , brick
+    , microlens
+    , microlens-mtl
+    , microlens-th
+    , vector
+    , vty
   default-language: Haskell2010
 
 executable checklist-tui-exe
@@ -49,6 +54,11 @@ executable checklist-tui-exe
       base >=4.7 && <5
     , brick
     , checklist-tui
+    , microlens
+    , microlens-mtl
+    , microlens-th
+    , vector
+    , vty
   default-language: Haskell2010
 
 test-suite checklist-tui-test
@@ -63,4 +73,9 @@ test-suite checklist-tui-test
       base >=4.7 && <5
     , brick
     , checklist-tui
+    , microlens
+    , microlens-mtl
+    , microlens-th
+    , vector
+    , vty
   default-language: Haskell2010

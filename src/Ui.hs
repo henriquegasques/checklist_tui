@@ -1,8 +1,4 @@
-module Ui
-    ( message
-    ) where
+module Ui (title) where
 
-import Brick
-
-message :: Widget ()
-message = str "Checklist TUI"
+title :: String
+title = "Checklist TUI"
