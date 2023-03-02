@@ -12,10 +12,11 @@ import Checklist.Attrs (attributesMap)
 import Checklist.Events (eventHandler)
 import Checklist.Draw (drawUI)
 
+import Data.Text (pack)
 import qualified Data.Vector as Vec
 
 initialState :: State
-initialState = State { _checklist = list () (Vec.fromList ["something", "someting else", "another check"]) 1 }
+initialState = State { _checklist = list () (Vec.fromList [(pack "-[ ] something"), (pack "-[ ] someting else"), (pack "-[ ] another check")]) 1 }
 
 app :: App State e ()
 app = App { appDraw = drawUI

@@ -42,6 +42,7 @@ library
     , microlens
     , microlens-mtl
     , microlens-th
+    , text
     , vector
     , vty
   default-language: Haskell2010
@@ -60,6 +61,7 @@ executable checklist-tui-exe
     , microlens
     , microlens-mtl
     , microlens-th
+    , text
     , vector
     , vty
   default-language: Haskell2010
@@ -79,6 +81,7 @@ test-suite checklist-tui-test
     , microlens
     , microlens-mtl
     , microlens-th
+    , text
     , vector
     , vty
   default-language: Haskell2010

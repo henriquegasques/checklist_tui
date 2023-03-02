@@ -7,10 +7,12 @@ module Checklist.Types (
                        , checklist
                        ) where
 
+import Data.Text
+
 import Lens.Micro.TH (makeLenses)
 import Brick.Widgets.List
 
-data State = State { _checklist :: List () String }
+data State = State { _checklist :: List () Text }
 
 makeLenses ''State
 
