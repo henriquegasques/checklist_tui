@@ -23,7 +23,7 @@ drawUI s = [ui]
         total = str $ show $ Vec.length $ l^.listElementsL
         isListFocused = True
         box = borderWithLabel label $
-              hLimit 45 $
+              hLimit 70 $
               vLimit 35 $
               renderList drawListElement isListFocused l
         ui = vCenter $ vBox [ hCenter box
@@ -37,4 +37,4 @@ drawListElement sel a =
     let selStr s = if sel
                    then withAttr customAttr (str s)
                    else str s
-    in hCenter $ selStr (show a)
+    in padLeftRight 5 $ selStr (show a)

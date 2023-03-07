@@ -1,5 +1,3 @@
-{-# LANGUAGE TemplateHaskell #-}
-
 module Main (main) where
 
 import Control.Monad (void)
@@ -16,7 +14,12 @@ import Data.Text (pack)
 import qualified Data.Vector as Vec
 
 initialState :: State
-initialState = State { _checklist = list () (Vec.fromList [(pack "-[ ] something"), (pack "-[ ] someting else"), (pack "-[ ] another check")]) 1 }
+initialState =
+  let checks = Vec.fromList [ pack "-[ ] Reviewed changes locally before commiting"
+                            , pack "-[ ] All changes are covered by tests"
+                            , pack "-[ ] Ran CI checks locally and they are green"
+                            ]
+  in State { _checklist = list () checks 1 }
 
 app :: App State e ()
 app = App { appDraw = drawUI
